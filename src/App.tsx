@@ -5,7 +5,7 @@ import Countdown from "./components/Countdown";
 import CoupleInfo from "./components/CoupleInfo";
 import WeddingDetails from "./components/WeddingDetails";
 import Program from "./components/Program";
-import RSVP from "./components/RSVP";
+// import RSVP from "./components/RSVP";
 import Footer from "./components/Footer";
 import BackgroundMusic from "./components/BackgroundMusic";
 import HeartAnimation from "./components/HeartAnimation";
@@ -47,7 +47,7 @@ const App = () => {
         <Program isLoaded={isLoaded} />
 
         {/* RSVP Form */}
-        <RSVP isLoaded={isLoaded} />
+        {/* <RSVP isLoaded={isLoaded} /> */}
 
         {/* Footer with Contact Info */}
         <Footer />
