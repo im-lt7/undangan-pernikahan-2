@@ -55,13 +55,13 @@ const Countdown: React.FC<CountdownProps> = ({ isLoaded }) => {
     return (
       <div className="flex flex-col items-center min-w-[48px] sm:min-w-[60px]">
         <div
-          className={`flex flex-col items-center justify-center h-16 w-16 sm:h-24 sm:w-24 bg-gradient-to-br from-rose-50 to-rose-100 rounded-lg shadow-md transform transition-all duration-500 ${
+          className={`flex flex-col items-center justify-center h-16 w-16 sm:h-24 sm:w-24 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-md transform transition-all duration-500 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <div className="text-2xl sm:text-3xl font-bold text-rose-600">{value}</div>
+          <div className="text-2xl sm:text-3xl font-bold text-white drop-shadow-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{value}</div>
         </div>
-        <p className="mt-2 text-xs sm:text-sm font-medium text-rose-700">
+        <p className="mt-2 text-xs sm:text-sm font-medium text-white/80" style={{ fontFamily: "'Lora', serif" }}>
           {weddingConstants.messages.timeUnits[unit]}
         </p>
       </div>
@@ -70,11 +70,11 @@ const Countdown: React.FC<CountdownProps> = ({ isLoaded }) => {
 
   return (
     <div
-      className={`transition-all duration-1000 delay-300 p-4 sm:p-8 ${
+      className={`transition-all duration-1000 delay-300 p-2 sm:p-8 bg-transparent ${
         isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
     >
-      <p className="text-xl text-rose-700 mb-4 font-medium text-center">
+      <p className="text-lg sm:text-xl text-white/90 drop-shadow-md mb-3 font-medium text-center" style={{ fontFamily: "'Lora', serif" }}>
         {weddingConstants.messages.countdown}
       </p>
       <div className="flex flex-wrap justify-center gap-4 sm:space-x-4">

@@ -25,24 +25,24 @@ const Program: React.FC<ProgramProps> = ({ isLoaded }) => {
   };
 
   const ProgramItem: React.FC<{ item: WeddingProgram }> = ({ item }) => (
-    <div className="bg-rose-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
-      <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+    <div className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/20 shadow-sm flex items-center space-x-3">
+      <div className="w-10 h-10 bg-rose-100/30 rounded-full flex items-center justify-center flex-shrink-0">
         {getIcon(item.icon)}
       </div>
       <div>
-        <h3 className="font-medium text-gray-800">{item.time}</h3>
-        <p className="text-sm text-gray-600">{item.event}</p>
+        <h3 className="font-medium text-white drop-shadow-sm">{item.time}</h3>
+        <p className="text-sm text-white/80" style={{ fontFamily: "'Lora', serif" }}>{item.event}</p>
       </div>
     </div>
   );
 
   return (
     <div
-      className={`p-8 bg-white transition-all duration-1000 delay-800 ${
+      className={`p-8 bg-white/5 backdrop-blur-sm border-t border-b border-white/20 transition-all duration-1000 delay-800 ${
         isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
     >
-      <h2 className="text-2xl  font-bold text-center mb-8 text-rose-700">
+      <h2 className="text-2xl  font-bold text-center mb-8 text-white drop-shadow-md" style={{ fontFamily: "'Playfair Display', serif", letterSpacing: '0.05em' }}>
         {weddingConstants.messages.weddingProgram}
       </h2>
 
